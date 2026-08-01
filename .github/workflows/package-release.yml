@@ -204,7 +204,7 @@ jobs:
           test "$(find "$release_dir" -mindepth 1 -maxdepth 1 -type f | wc -l)" -eq 4
       - id: provenance
         name: 创建共享包构建来源证明
-        uses: actions/attest@f7c74d28b9d84cb8768d0b8ca14a4bac6ef463e6 # v4.2.0
+        uses: actions/attest@508db95dd578ae2727ebd6217d5ba78e4fbda05d # v4.2.1
         with:
           subject-path: |
             ${{ runner.temp }}/release/yanxu-package-${{ needs.validate.outputs.version }}.crate
@@ -213,7 +213,7 @@ jobs:
             ${{ runner.temp }}/release/yanxu-package-${{ needs.validate.outputs.version }}.cdx.json
       - id: sbom
         name: 创建共享包 SBOM 证明
-        uses: actions/attest@f7c74d28b9d84cb8768d0b8ca14a4bac6ef463e6 # v4.2.0
+        uses: actions/attest@508db95dd578ae2727ebd6217d5ba78e4fbda05d # v4.2.1
         with:
           subject-path: ${{ runner.temp }}/release/yanxu-package-${{ needs.validate.outputs.version }}.crate
           sbom-path: ${{ runner.temp }}/release/yanxu-package-${{ needs.validate.outputs.version }}.cdx.json
