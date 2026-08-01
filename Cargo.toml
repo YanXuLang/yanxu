@@ -57,7 +57,7 @@ name = "yanxu"
 path = "src/main.rs"
 
 [dependencies]
-base64 = "0.22"
+base64 = "0.23"
 flate2 = "1"
 getrandom = "0.2"
 hmac = "0.12"
