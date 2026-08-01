@@ -301,7 +301,7 @@ jobs:
           path: ${{ runner.temp }}/release
           merge-multiple: true
       - name: 安装 SBOM 工具
-        uses: taiki-e/install-action@07b4745e0c39a41822af610387492e3e53aa222b # v2.83.4
+        uses: taiki-e/install-action@065d6a08a14e61e89fb0a4c10eecdbdef39c7d8e # v2.85.4
         with:
           tool: cargo-cyclonedx@0.5.9
       - name: 汇总目标制品并生成 SBOM
